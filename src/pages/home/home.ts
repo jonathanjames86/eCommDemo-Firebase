@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,19 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    private _navCtrl: NavController,
+    private _navParams: NavParams,
+    private _menuCtrl: MenuController
+  ) {
+  }
 
+  private _logOutTap() {
+    this._navCtrl.pop();
+  }
+
+  private _openMenu() {
+    this._menuCtrl.open();
   }
 
 }

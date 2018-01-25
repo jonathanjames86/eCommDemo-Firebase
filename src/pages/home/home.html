@@ -1,8 +1,11 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons left>
+      <button ion-button (tap)="_openMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,9 +13,5 @@
 <ion-content padding>
   <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button secondary (tap)="_logOutTap()">Log Out</button>
 </ion-content>

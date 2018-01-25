@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>LoginPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+      <ion-label color="primary" stacked>Email</ion-label>
+      <ion-input [(ngModel)]="_email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Password</ion-label>
+      <ion-input [(ngModel)]="_password" type="password"></ion-input>
+    </ion-item>
+
+    <button [disabled]="!_email || !_password" ion-button block (tap)="_loginTap()"> Login </button>
+
+</ion-content>
