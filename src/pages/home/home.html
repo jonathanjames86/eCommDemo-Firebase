@@ -5,8 +5,12 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-
     <ion-title>Home</ion-title>
+    <ion-buttons right>
+      <button ion-button (tap)="_cartModalTap()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -14,4 +18,5 @@
   <h3>Ionic Menu Starter</h3>
 
   <button ion-button secondary (tap)="_logOutTap()">Log Out</button>
+
 </ion-content>

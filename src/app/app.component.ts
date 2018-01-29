@@ -13,11 +13,7 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
-
-  // Pages of our app
-
-// ['ListPage', HomePage]
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -26,7 +22,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Login', component: LoginPage },
-      { title: 'List', component: ListPage }
+      { title: 'Log Out', component: LoginPage }
     ];
 
   }
@@ -39,6 +35,11 @@ export class MyApp {
   }
 
   openPage(page) {
+    if(page.title === "Log Out") {
+      this.nav.setRoot(page.component)
+      return;
+    }
+
     this.nav.push(page.component);
   }
 }
