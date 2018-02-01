@@ -18,12 +18,15 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyAgFXmc18OzAPcJRV-cShxaq9psst4Yd1U",
-  authDomain: "ecommdemo-5f17a.firebaseapp.com",
-  databaseURL: "https://ecommdemo-5f17a.firebaseio.com",
-  projectId: "ecommdemo-5f17a",
-  storageBucket: "ecommdemo-5f17a.appspot.com",
-  messagingSenderId: "689867688612"
+  /**
+   * Grab your Firbase config from your project.
+   */
+  apiKey: "get",
+  authDomain: "your",
+  databaseURL: "own",
+  projectId: "database",
+  storageBucket: "or",
+  messagingSenderId: "else"
 };
 
 @NgModule({
