@@ -19,7 +19,7 @@ import { AuthProvider } from '../providers/auth/auth';
 
 export const firebaseConfig = {
   /**
-   * Grab your Firbase config from your project.
+   * Grab your Firebase config from your project.
    */
   apiKey: "get",
   authDomain: "your",
