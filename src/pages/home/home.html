@@ -15,8 +15,15 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>ECommDemo App</h3>
+  <ion-list>
+    {{_title}}
+    <ion-item *ngFor="let brand of _brands">
+      {{brand}}
+    </ion-item>
+  </ion-list>
+  <button ion-button secondary (tap)="_getHats()">Get Hats</button>
+  <button ion-button secondary (tap)="_getShoes()">Get Shoes</button>
 
-  <button ion-button secondary (tap)="_logOutTap()">Log Out</button>
 
 </ion-content>

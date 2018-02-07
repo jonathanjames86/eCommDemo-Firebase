@@ -16,17 +16,18 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
+import { DataBaseProvider } from '../providers/data-base/data-base';
 
 export const firebaseConfig = {
   /**
-   * Grab your Firbase config from your project.
+   * Grab your Firebase config from your project.
    */
-  apiKey: "get",
-  authDomain: "your",
-  databaseURL: "own",
-  projectId: "database",
-  storageBucket: "or",
-  messagingSenderId: "else"
+  apiKey: "AIzaSyAgFXmc18OzAPcJRV-cShxaq9psst4Yd1U",
+  authDomain: "ecommdemo-5f17a.firebaseapp.com",
+  databaseURL: "https://ecommdemo-5f17a.firebaseio.com",
+  projectId: "ecommdemo-5f17a",
+  storageBucket: "ecommdemo-5f17a.appspot.com",
+  messagingSenderId: "689867688612"
 };
 
 @NgModule({
@@ -59,7 +60,8 @@ export const firebaseConfig = {
     AuthProvider,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    DataBaseProvider
   ]
 })
 export class AppModule {}
